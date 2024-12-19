@@ -1,7 +1,11 @@
 const express = require("express");
+const dotenv = require("dotenv");
+
+dotenv.config();
 
 const app = express();
-const port = 5000;
+
+const port = process.env.PORT || 5000;
 
 app.get("/", (req, res) => {
   res.status(200).send(`
@@ -9,7 +13,7 @@ app.get("/", (req, res) => {
       <html lang="es">
         <head>
           <meta charset="UTF-8">
-          <title>Mi Aplicación Node.js</title>
+          <title>My app Node.js</title>
           <style>
             h1 {
               color: blue;
@@ -19,10 +23,13 @@ app.get("/", (req, res) => {
         <body>
           <h1>Hello, World!</h1> 
            <h2 id="h2"></h2>
+           <p>App port: <strong id="port"> </strong></p>
 
         <script>
        const h2 = document.getElementById('h2');
+       const port = document.getElementById('port');
        h2.innerHTML = "This is a h2"
+       port.innerHTML = "${port}"
           </script>
         </body>
       </html>
