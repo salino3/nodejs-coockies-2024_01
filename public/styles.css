@@ -1,4 +1,33 @@
 body {
-  background-color: black;
-  color: white;
+}
+
+body nav {
+  background-color: #563d7c;
+  color: #fff;
+  padding: 30px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+nav ul li {
+  list-style: none;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 5px 8px;
+}
+
+nav ul li a:hover {
+  color: yellow;
 }
