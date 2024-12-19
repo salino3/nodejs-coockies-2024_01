@@ -19,6 +19,10 @@ app.get("/", (err, res) => {
   res.render("index");
 });
 
+app.get("/register", (err, res) => {
+  res.render("register");
+});
+
 app.listen(port, () => {
   console.log("Server is running on port " + port);
 });
